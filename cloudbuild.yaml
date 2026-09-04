@@ -21,13 +21,13 @@ steps:
       - '.'
 
 substitutions:
-  _NEXT_PUBLIC_FIREBASE_API_KEY: 'placeholder-key'
-  _NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN: 'placeholder-domain'
-  _NEXT_PUBLIC_FIREBASE_PROJECT_ID: 'placeholder-project-id'
-  _NEXT_PUBLIC_FIREBASE_STORAGE_BUCKET: 'placeholder-bucket'
-  _NEXT_PUBLIC_FIREBASE_MESSAGING_SENDER_ID: 'placeholder-sender-id'
-  _NEXT_PUBLIC_FIREBASE_APP_ID: 'placeholder-app-id'
-  _NEXT_PUBLIC_FIREBASE_MEASUREMENT_ID: 'placeholder-measurement-id'
+  _NEXT_PUBLIC_FIREBASE_API_KEY: 'AIzaSyCM6iqRZZzt7deqqqu7PanKpzcMvaMwzpA'
+  _NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN: 'glucoguard-t1d-505614.firebaseapp.com'
+  _NEXT_PUBLIC_FIREBASE_PROJECT_ID: 'glucoguard-t1d-505614'
+  _NEXT_PUBLIC_FIREBASE_STORAGE_BUCKET: 'glucoguard-t1d-505614.firebasestorage.app'
+  _NEXT_PUBLIC_FIREBASE_MESSAGING_SENDER_ID: '739940812349'
+  _NEXT_PUBLIC_FIREBASE_APP_ID: '1:739940812349:web:2d2fa8d7a8baae8eee0c54'
+  _NEXT_PUBLIC_FIREBASE_MEASUREMENT_ID: 'G-VRQD63NXHZ'
 
 images:
   - 'gcr.io/$PROJECT_ID/glucoguard-t1d'
