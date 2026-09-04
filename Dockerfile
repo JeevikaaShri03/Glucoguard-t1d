@@ -1,8 +1,8 @@
 # Stage 2: Build the application
-FROM node:20-alpine AS builder
+FROM node:20-alpine AS deps
 WORKDIR /app
-COPY --from=deps /app/node_modules ./node_modules
-COPY . .
+COPY package.json package-lock.json* ./
+RUN npm ci
 
 # Declare build arguments for Next.js public variables
 ARG _NEXT_PUBLIC_FIREBASE_API_KEY
