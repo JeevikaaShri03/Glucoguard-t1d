@@ -3,7 +3,7 @@ import { NextRequest, NextResponse } from "next/server";
 import { GoogleGenerativeAI } from "@google/generative-ai";
 import { bedtimeResponseSchema } from "@/src/types";
 
-const genAI = new GoogleGenerativeAI(process.env.GEMINI_API_KEY!);
+//const genAI = new GoogleGenerativeAI(process.env.GEMINI_API_KEY!);
 
 export async function POST(req: NextRequest) {
   try {
@@ -13,6 +13,9 @@ export async function POST(req: NextRequest) {
     const glucoseReadings = body.glucoseReadings || [140, 130, 125, 110];
     const iobUnits = body.iobUnits ?? 1.8;
     const lateCarbsGrams = body.lateCarbsGrams ?? 0;
+
+    const genAI = new GoogleGenerativeAI(process.env.GEMINI_API_KEY!);
+
 
     const model = genAI.getGenerativeModel({
       model: "gemini-2.5-flash", 

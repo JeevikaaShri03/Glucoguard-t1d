@@ -1,6 +1,4 @@
 import { NextRequest, NextResponse } from "next/server";
-import { db } from "@/src/lib/firebase";
-import { collection, query, where, getDocs } from "firebase/firestore";
 
 export async function GET(req: NextRequest) {
   try {
@@ -10,6 +8,10 @@ export async function GET(req: NextRequest) {
     if (!userId) {
       return NextResponse.json({ success: false, message: "No user ID provided" });
     }
+
+    // Dynamically import Firebase and Firestore inside the handler to prevent build-time evaluation
+    const { db } = await import("@/src/lib/firebase");
+    const { collection, query, where, getDocs } = await import("firebase/firestore");
 
     const logsRef = collection(db, "logs");
     const q = query(logsRef, where("userId", "==", userId));

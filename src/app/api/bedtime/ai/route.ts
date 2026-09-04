@@ -1,7 +1,7 @@
 import { NextRequest, NextResponse } from "next/server";
 import { GoogleGenAI } from "@google/genai";
 
-const ai = new GoogleGenAI({ apiKey: process.env.GEMINI_API_KEY });
+//const ai = new GoogleGenAI({ apiKey: process.env.GEMINI_API_KEY });
 
 export async function POST(req: NextRequest) {
   try {
@@ -19,6 +19,8 @@ Provide concise, friendly, and clinical safety guidance (2-3 sentences max):
 1. Explain briefly why their risk is at this level given their BG and IOB.
 2. Recommend specific snack compositions (e.g., fast-acting carbs + protein/fats like peanut butter toast or milk) if carbs are needed.
 `;
+
+const ai = new GoogleGenAI({ apiKey: process.env.GEMINI_API_KEY });
 
     const response = await ai.models.generateContent({
       model: "gemini-3.6-flash",
