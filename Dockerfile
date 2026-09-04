@@ -34,4 +34,4 @@ RUN npm run build
 
 EXPOSE 8080
 ENV PORT=8080
-CMD ["npx", "next", "start", "-p", "8080"]
+CMD ["sh", "-c", "npx next start -p ${PORT:-8080}"]
