@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
+  <!-- Background -->
+  <rect width="64" height="64" rx="16" fill="#0f172a"/>
+  
+  <!-- Wi-Fi / Monitoring Signal Waves -->
+  <path d="M20 22a16 16 0 0 1 24 0" fill="none" stroke="#38bdf8" stroke-width="4" stroke-linecap="round"/>
+  <path d="M26 28a8 8 0 0 1 12 0" fill="none" stroke="#38bdf8" stroke-width="4" stroke-linecap="round"/>
+
+  <!-- T1D Blood Drop Center -->
+  <path d="M32 24c0 0-10 12-10 18a10 10 0 0 0 20 0c0-6-10-18-10-18z" fill="#ef4444"/>
+
+  <!-- Sensor Connecting Wire / Circuit Trace -->
+  <path d="M32 52v6M24 55h16" stroke="#38bdf8" stroke-width="3" stroke-linecap="round"/>
+  <circle cx="32" cy="52" r="2" fill="#38bdf8"/>
+</svg>
